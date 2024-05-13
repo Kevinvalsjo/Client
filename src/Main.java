@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String args[]) throws Exception {
-        Scanner input = new Scanner(System.in);
         int s;
         int portnumber = 1111;
         if (args.length >= 1) {
@@ -34,33 +33,32 @@ public class Main {
         int case0 =Integer.parseInt(msg0);
                 switch (case0) {
                     case 1 -> {
-
                         System.out.println("Skriv en siffra");
-
                         msg = br.readLine();
+                        DatagramPacket data = new DatagramPacket(msg.getBytes(), 0, msg.length(), group, portnumber);
+                        chatMulticastSocket.send(data);
                         System.out.println("Skriv en siffra");
                         msg2 = br.readLine();
 
-                        DatagramPacket data = new DatagramPacket(msg.getBytes(), 0, msg.length(), group, portnumber);
                         DatagramPacket data2 = new DatagramPacket(msg2.getBytes(), 0, msg2.length(), group, portnumber);
-                        chatMulticastSocket.send(data);
+
                         chatMulticastSocket.send(data2);
                     }
                     case 2 ->{
                         System.out.println("Skriv en siffra");
-
                         msg3 = br.readLine();
+                        DatagramPacket data3 = new DatagramPacket(msg3.getBytes(), 0, msg3.length(), group, portnumber);
+                        chatMulticastSocket.send(data3);
+
                         System.out.println("Skriv en siffra");
                         msg4 = br.readLine();
-
-                        DatagramPacket data3 = new DatagramPacket(msg3.getBytes(), 0, msg3.length(), group, portnumber);
                         DatagramPacket data4 = new DatagramPacket(msg4.getBytes(), 0, msg4.length(), group, portnumber);
-                        chatMulticastSocket.send(data3);
                         chatMulticastSocket.send(data4);
 
                     }
 
                 }
+        System.out.println("Hejdå");
                 chatMulticastSocket.close();
     }
 }
