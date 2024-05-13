@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="110c237d-22c1-4319-a153-089a4b74b60f" name="Changes" comment="drew">
+    <list default="true" id="110c237d-22c1-4319-a153-089a4b74b60f" name="Changes" comment="ad">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -47,7 +47,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715156770253</updated>
-      <workItem from="1715156771342" duration="1378000" />
+      <workItem from="1715156771342" duration="4543000" />
     </task>
     <task id="LOCAL-00001" summary="drew">
       <option name="closed" value="true" />
@@ -65,7 +65,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715157207905</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ad">
+      <option name="closed" value="true" />
+      <created>1715158763519</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715158763519</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -73,6 +81,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="drew" />
-    <option name="LAST_COMMIT_MESSAGE" value="drew" />
+    <MESSAGE value="ad" />
+    <option name="LAST_COMMIT_MESSAGE" value="ad" />
   </component>
 </project>

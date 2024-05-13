@@ -21,15 +21,20 @@ public class Main {
 
         InetAddress group = InetAddress.getByName("225.4.5.6");
 // Joins a multicast group
-        String msg = "";
-        String msg2 = "";
+        String msg,msg2,msg3,msg4,msg0="";
+
         chatMulticastSocket.joinGroup(group);
 // Prompt a user to enter a message String msg = "";
 
         System.out.println("Vill du 1.Addera 2.Multiplicera");
-        int svar =input.nextInt();
-                switch (svar) {
+
+        msg0 = br.readLine();
+        DatagramPacket data5 = new DatagramPacket(msg0.getBytes(), 0, msg0.length(), group, portnumber);
+        chatMulticastSocket.send(data5);
+        int case0 =Integer.parseInt(msg0);
+                switch (case0) {
                     case 1 -> {
+
                         System.out.println("Skriv en siffra");
 
                         msg = br.readLine();
@@ -44,12 +49,12 @@ public class Main {
                     case 2 ->{
                         System.out.println("Skriv en siffra");
 
-                        msg = br.readLine();
+                        msg3 = br.readLine();
                         System.out.println("Skriv en siffra");
-                        msg2 = br.readLine();
+                        msg4 = br.readLine();
 
-                        DatagramPacket data3 = new DatagramPacket(msg.getBytes(), 0, msg.length(), group, portnumber);
-                        DatagramPacket data4 = new DatagramPacket(msg2.getBytes(), 0, msg2.length(), group, portnumber);
+                        DatagramPacket data3 = new DatagramPacket(msg3.getBytes(), 0, msg3.length(), group, portnumber);
+                        DatagramPacket data4 = new DatagramPacket(msg4.getBytes(), 0, msg4.length(), group, portnumber);
                         chatMulticastSocket.send(data3);
                         chatMulticastSocket.send(data4);
 
